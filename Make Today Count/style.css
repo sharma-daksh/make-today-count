@@ -1,0 +1,306 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(72,163,0,0.3);
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+}
+
+main{
+    padding: 0 16px 48px;
+}
+h1{
+    font-size: 64px;
+    color:#48A300;
+    text-align: center;
+    font: weight 900px;
+
+}
+.title span{
+    color: #61481C;
+}
+.sun-icon{
+    vertical-align: middle;
+    margin-left: 16px;
+}
+
+.main-box {
+    background-color: #F5F5F5;
+    max-width: 660px;
+    margin-inline: auto;
+    border-radius: 15px;
+    padding: 32px 42px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.main-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+
+
+.subtitle{
+    font-size: 34px;
+    font-weight: 900;
+}
+.label{
+    font-size: 15px;
+    color: gray;
+}
+
+.progress-bar {
+    background-color: rgba(72, 163, 0, 0.1);
+    height: 30px;
+    border-radius: 14px;
+}
+
+.progress-made {
+    height: 100%;
+    background: linear-gradient(90deg, #48A300, #3A8100);
+    width: 0%;
+    border-radius: 14px;
+    font-size: 10px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    transition: width 0.6s ease-in-out; /* Smooth animation */
+}
+
+
+.progress-made span{
+    padding-left: 20px;
+}
+.error-msg{
+    color: red;
+    font-size: 14px;
+    margin-top: 4PX;
+    opacity: 0;
+}
+.give-error{
+    opacity: 1;
+}
+.goals{
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 17px;
+    height: 82px;
+    display: flex;
+    align-items: center;
+    padding: 0 22px;
+    margin-bottom: 42PX;
+}
+.goals:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+    transition: all 0.3s ease-in-out;
+}
+
+
+.custom-checkbox {
+    height: 24px;
+    width: 24px;
+    border: 2px solid gray;
+    background-color: #F5F5F5;
+    border-radius: 50%;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+.custom-checkbox:hover {
+    background-color: #9dd470;
+    border-color: #3a8100;
+}
+
+
+.input{
+    background-color: #F5F5F5;
+    margin-left: 42px;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    width: 100%;
+    align-self: stretch;
+
+}
+.input::placeholder {
+    color: #A0A0A0;
+}
+
+
+.end-quote {
+    text-align: center;
+    font-weight: 500;
+    font-style: italic;
+    color: #707070;
+}
+
+.d {
+    font-size: 20px;
+    font-weight: 700;
+    color: rgb(182, 182, 182);
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    gap: 10px;              
+    margin-top: 20px;
+}
+
+.social-icons {
+    display: flex;          
+    gap: 15px;              
+}
+
+.d .fa {
+    color: rgb(182, 182, 182);
+    font-size: 25px;
+    transition: all 0.3s ease;
+}
+
+.d .fa:hover {
+    color: #3a8100;         
+    transform: scale(1.1);  
+}
+
+.completed .custom-checkbox{
+    background: #48A300;
+    border: none;
+}
+
+.tick{
+    display: none;
+}
+.completed .tick{
+    display: block;
+}
+
+.completed .input{
+    color: #3a8100;
+    text-decoration: line-through;
+}
+
+.social-icons a.github {
+    color: rgb(182, 182, 182); /* GitHub Blue */
+}
+
+.social-icons a.github:hover {
+    color: #333; /* GitHub Hover Color (Dark Grey) */
+}
+
+.social-icons a.linkedin {
+    color: rgb(182, 182, 182); /* LinkedIn Blue */
+}
+
+.social-icons a.linkedin:hover {
+    color: #005582; /* LinkedIn Darker Blue on Hover */
+}
+
+.social-icons a {
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+}
+
+
+
+body::before, body::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    filter: blur(70px);
+    animation: float ease-in-out infinite alternate;
+}
+
+body::before {
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(72, 163, 0, 0.5), rgba(72, 163, 0, 0));
+    top: 15%;
+    left: 8%;
+    animation-duration: 4s; /* Shortened duration */
+}
+
+body::after {
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(97, 72, 28, 0.5), rgba(97, 72, 28, 0));
+    bottom: 10%;
+    right: 5%;
+    animation-duration: 6s; /* Shortened duration */
+}
+
+@keyframes float {
+    to {
+        transform: translateY(-30px) scale(1.1);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width: 768px){
+    .title{
+    font-size:32px;
+}
+    .main-box{
+        padding: 16px,32px;
+    }
+
+    .goals{
+        height: 64px;
+        margin-bottom: 24px;
+        border-radius: 14px;
+    }
+    .checkbox{
+        height: 20px;
+        width: 20px;
+    }
+    .progress-bar{
+        height: 20px;
+    }
+}
+
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.main-box {
+    animation: fadeInUp 0.8s ease-out;
+}
